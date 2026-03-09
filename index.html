@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>813sellz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.png" alt="813sellz Logo" class="logo" />
+        <div>
+          <h1>813sellz</h1>
+          <p class="tagline">Curated inventory • sneakers • bags • apparel • accessories</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#inventory">Inventory</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <p class="eyebrow">Personal Catalog</p>
+      <h2>Browse what’s available at 813sellz</h2>
+      <p class="hero-text">
+        A clean showcase of sneakers, bags, apparel, accessories, collectibles, and more.
+      </p>
+      <a href="#inventory" class="hero-btn">Browse Inventory</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="inventory" class="inventory-section">
+      <div class="section-top">
+        <div>
+          <p class="section-label">Inventory</p>
+          <h3>All Items</h3>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by item, brand, or category..."
+        />
+
+        <div class="filter-row">
+          <div class="filters" id="categoryFilters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="shoes">Shoes</button>
+            <button class="filter-btn" data-category="bags">Bags</button>
+            <button class="filter-btn" data-category="apparel">Apparel</button>
+            <button class="filter-btn" data-category="accessories">Accessories</button>
+            <button class="filter-btn" data-category="collectibles">Collectibles</button>
+          </div>
+
+          <div class="filters" id="statusFilters">
+            <button class="filter-btn active" data-status="all">All Status</button>
+            <button class="filter-btn" data-status="available">Available</button>
+            <button class="filter-btn" data-status="sold">Sold</button>
+            <button class="filter-btn" data-status="reserved">Reserved</button>
+            <button class="filter-btn" data-status="collection">Collection</button>
+          </div>
+        </div>
+      </div>
+
+      <section id="itemsGrid" class="items-grid"></section>
+    </section>
+
+    <section id="about" class="info-section">
+      <p class="section-label">About</p>
+      <h3>About 813sellz</h3>
+      <p>
+        813sellz is a curated personal inventory page for showcasing items across multiple
+        categories including sneakers, bags, apparel, accessories, and collectibles.
+      </p>
+    </section>
+
+    <section id="contact" class="info-section">
+      <p class="section-label">Contact</p>
+      <h3>Get in touch</h3>
+      <p>
+        Interested in an item? 
+      </p>
+      <p class="contact-box">
+        Instagram: @813sellz <br />
+        Email: armanb@813sellz.com
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 813sellz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
