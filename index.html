@@ -18,8 +18,8 @@
       </div>
 
       <nav class="nav">
+        <a href="#featured">Featured</a>
         <a href="#inventory">Inventory</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -27,21 +27,35 @@
 
   <section class="hero">
     <div class="container hero-content">
-      <p class="eyebrow">Personal Catalog</p>
-      <h2>Browse what’s available at 813sellz</h2>
+      <p class="eyebrow">Premium Resale Catalog</p>
+      <h2>Browse the latest inventory from 813sellz</h2>
       <p class="hero-text">
-        A clean showcase of sneakers, bags, apparel, accessories, collectibles, and more.
+        Sneakers, bags, apparel, accessories, collectibles, and curated pieces.
       </p>
       <a href="#inventory" class="hero-btn">Browse Inventory</a>
     </div>
   </section>
 
   <main class="container">
-    <section id="inventory" class="inventory-section">
+    <section id="featured" class="inventory-section">
       <div class="section-top">
+        <div>
+          <p class="section-label">Featured</p>
+          <h3>Highlighted Items</h3>
+        </div>
+      </div>
+      <section id="featuredGrid" class="items-grid"></section>
+    </section>
+
+    <section id="inventory" class="inventory-section">
+      <div class="section-top section-top-flex">
         <div>
           <p class="section-label">Inventory</p>
           <h3>All Items</h3>
+        </div>
+
+        <div class="inventory-stats">
+          <span id="inventoryCount">0 items</span>
         </div>
       </div>
 
@@ -52,22 +66,35 @@
           placeholder="Search by item, brand, or category..."
         />
 
-        <div class="filter-row">
-          <div class="filters" id="categoryFilters">
-            <button class="filter-btn active" data-category="all">All</button>
-            <button class="filter-btn" data-category="shoes">Shoes</button>
-            <button class="filter-btn" data-category="bags">Bags</button>
-            <button class="filter-btn" data-category="apparel">Apparel</button>
-            <button class="filter-btn" data-category="accessories">Accessories</button>
-            <button class="filter-btn" data-category="collectibles">Collectibles</button>
+        <div class="toolbar-bottom">
+          <div class="filter-row">
+            <div class="filters" id="categoryFilters">
+              <button class="filter-btn active" data-category="all">All</button>
+              <button class="filter-btn" data-category="shoes">Shoes</button>
+              <button class="filter-btn" data-category="bags">Bags</button>
+              <button class="filter-btn" data-category="apparel">Apparel</button>
+              <button class="filter-btn" data-category="accessories">Accessories</button>
+              <button class="filter-btn" data-category="collectibles">Collectibles</button>
+            </div>
+
+            <div class="filters" id="statusFilters">
+              <button class="filter-btn active" data-status="all">All Status</button>
+              <button class="filter-btn" data-status="available">Available</button>
+              <button class="filter-btn" data-status="sold">Sold</button>
+              <button class="filter-btn" data-status="reserved">Reserved</button>
+              <button class="filter-btn" data-status="collection">Collection</button>
+            </div>
           </div>
 
-          <div class="filters" id="statusFilters">
-            <button class="filter-btn active" data-status="all">All Status</button>
-            <button class="filter-btn" data-status="available">Available</button>
-            <button class="filter-btn" data-status="sold">Sold</button>
-            <button class="filter-btn" data-status="reserved">Reserved</button>
-            <button class="filter-btn" data-status="collection">Collection</button>
+          <div class="sort-wrap">
+            <label for="sortSelect">Sort</label>
+            <select id="sortSelect">
+              <option value="default">Default</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="name-az">Name: A to Z</option>
+              <option value="name-za">Name: Z to A</option>
+            </select>
           </div>
         </div>
       </div>
@@ -75,24 +102,13 @@
       <section id="itemsGrid" class="items-grid"></section>
     </section>
 
-    <section id="about" class="info-section">
-      <p class="section-label">About</p>
-      <h3>About 813sellz</h3>
-      <p>
-        813sellz is a curated personal inventory page for showcasing items across multiple
-        categories including sneakers, bags, apparel, accessories, and collectibles.
-      </p>
-    </section>
-
     <section id="contact" class="info-section">
       <p class="section-label">Contact</p>
       <h3>Get in touch</h3>
-      <p>
-        Interested in an item? 
-      </p>
+      <p>Interested in an item? Reach out directly.</p>
       <p class="contact-box">
-        Instagram: @813sellz <br />
-        Email: armanb@813sellz.com
+        Instagram: @yourhandle <br />
+        Email: yourname@email.com
       </p>
     </section>
   </main>
