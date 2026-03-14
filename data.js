@@ -80,6 +80,24 @@ const items = [
         "images/labubu-1.jpg",
         "images/labubu-2.jpg"
       ],
-      description: "Personal collection piece kept in mint condition."
+      description: "Personal collection piece kept in mint condition."  
+    },
+    {
+        id: 6,
+        name: "Saint Laurent YSL Sunset Black Leather Chain Shoulder Bag",
+        brand: "Saint Laurent",
+        category: "bags",
+        size: "Medium",
+        condition: "9.5/10. Like New condition. Bag appears unused with very minimal handling wear. Light dust from storage but leather, corners, and hardware remain clean with no visible scratches or damage. Interior is clean. No original dust bag or box included.",
+        price: "1900",
+        status: "available",
+        featured: true,
+        images: [
+            "images/YSL-sunset-1.PNG",
+            "images/YSL-sunset-2.PNG",
+            "images/YSL-sunset-3.PNG",
+            "images/YSL-sunset-4.PNG"
+        ],
+        description: "Authentic Saint Laurent YSL Sunset chain shoulder bag crafted in smooth black leather with silver-tone YSL monogram hardware and chain strap. Features a structured flap design with magnetic closure and Saint Laurent Paris logo inside. Elegant and timeless bag perfect for everyday use or evening wear. Bag was stored and shows only light dust from storage. No dust bag or box included."
     }
   ];
