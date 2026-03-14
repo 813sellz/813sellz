@@ -24,15 +24,15 @@ const items = [
         brand: "Louis Vuitton",
         category: "bags",
         size: "MM",
-        condition: "9/10",
-        price: "1095",
+        condition: "8/10",
+        price: "875",
         status: "available",
         featured: true,
         images: [
             "images/LV-damier-ebene-1.PNG",
             "images/lv-damier-ebene-2.PNG"
             ],
-        description: "Premium designer bag with clean exterior and solid overall condition. From 2012 collection. Doesn't include box or dustbag"
+        description: "Clean preowned Damier Ebene Canvas Tote with minimal sign of use. Hardware shows light surface wear from normal use. Interior is clean and no major stains or tears.  No box or dust bag for this bag."
     },
     {
       id: 3,
