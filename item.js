@@ -29,7 +29,7 @@ if (!item) {
   itemDetail.innerHTML = `
     <div class="item-layout">
       <div class="item-image-box">
-        <img src="${item.image}" alt="${item.name}" class="item-main-image">
+        <img src="${item.images}" alt="${item.name}" class="item-main-image">
       </div>
 
       <div class="item-info-box">
