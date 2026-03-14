@@ -1,27 +1,27 @@
 const items = [
     {
-      id: 1,
-      name: "Jordan 4 Military Black",
-      brand: "Jordan",
+    id: 1,
+      name: "Nike Air Max 97 Off-White Menta",
+      brand: "Nike",
       category: "shoes",
-      size: "9.5",
-      condition: "9/10",
-      price: "$300",
+      size: "8 M",
+      condition: "8.5/10",
+      price: "$400",
       status: "available",
-      image: "images/jordan4.jpg",
-      description: "Clean pair in very good condition with strong shape and minimal wear."
+      image: "airmax-offwhite-menta-1.png",
+      description: "Clean pair in very good condition with strong shape and minimal wear. No Box."
     },
     {
       id: 2,
-      name: "Louis Vuitton Bag",
+      name: "Louis Vuitton Damier Ebene Hampstead ",
       brand: "Louis Vuitton",
       category: "bags",
-      size: "One Size",
-      condition: "8.5/10",
-      price: "$1,150",
-      status: "reserved",
-      image: "images/lv-bag.jpg",
-      description: "Premium designer bag with clean exterior and solid overall condition."
+      size: "MM",
+      condition: "9/10",
+      price: "$1095",
+      status: "Available",
+      image: "LV-damier-ebene-1.png",
+      description: "Premium designer bag with clean exterior and solid overall condition. From 2012 collection. Doesn't include box or dustbag"
     },
     {
       id: 3,
