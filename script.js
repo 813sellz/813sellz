@@ -58,7 +58,7 @@ function renderItems() {
     <a class="card-link" href="item.html?id=${item.id}">
       <article class="card">
         <div class="card-image-wrap">
-          <img class="card-image" src="${item.image}" alt="${item.name}">
+          <img class="card-image" src="${item.images}" alt="${item.name}">
           <span class="badge ${item.status}">${formatStatus(item.status)}</span>
         </div>
 
