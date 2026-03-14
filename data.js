@@ -30,7 +30,7 @@ const items = [
         featured: true,
         images: [
             "images/LV-damier-ebene-1.PNG",
-            "images/LV-damier-ebene-2.PNG"
+            "images/lv-damier-ebene-2.PNG"
             ],
         description: "Premium designer bag with clean exterior and solid overall condition. From 2012 collection. Doesn't include box or dustbag"
     },
