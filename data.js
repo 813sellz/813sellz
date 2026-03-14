@@ -5,8 +5,8 @@ const items = [
       brand: "Nike",
       category: "shoes",
       size: "8 M",
-      condition: "8.5/10",
-      price: 400,
+      condition: "8/10. Good used condition with normal wear from use. Light outsole wear and minor creasing. No box or extra laces.",
+      price: 350,
       status: "available",
       featured: true,
       images: [
@@ -16,7 +16,7 @@ const items = [
           "images/airmax-offwhite-menta-3.PNG"
           
       ],
-      description: "Clean pair in very good condition with strong shape and minimal wear. No Box."
+      description: "Authentic Nike x Off-White Air Max 97 “Menta” from Virgil Abloh’s collaboration with Nike. Features translucent grey upper, gradient green-to-pink swoosh, signature Off-White text branding, and original blue zip-tie."
     },
     {
         id:2,
@@ -24,15 +24,15 @@ const items = [
         brand: "Louis Vuitton",
         category: "bags",
         size: "MM",
-        condition: "8/10",
+        condition: "8/10. Clean preowned Damier Ebene Canvas Tote with minimal sign of use. Hardware shows light surface wear from normal use. Interior is clean and no major stains or tears.",
         price: "875",
         status: "available",
         featured: true,
         images: [
             "images/LV-damier-ebene-1.PNG",
-            "images/lv-damier-ebene-2.PNG"
+            "images/LV-damier-ebene-2.PNG"
             ],
-        description: "Clean preowned Damier Ebene Canvas Tote with minimal sign of use. Hardware shows light surface wear from normal use. Interior is clean and no major stains or tears.  No box or dust bag for this bag."
+        description: "  Authentic Louis Vuitton Damier Ebene tote bag featuring the iconic brown checkerboard coated canvas with dark brown leather trim and gold-tone hardware. Classic structured tote design with comfortable shoulder straps and front Louis Vuitton engraved plaque. Spacious interior perfect for everyday use. No box or dust bag for this bag. "
     },
     {
       id: 3,
