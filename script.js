@@ -1,11 +1,15 @@
 const itemsGrid = document.getElementById("itemsGrid");
+const featuredGrid = document.getElementById("featuredGrid");
+const inventoryCount = document.getElementById("inventoryCount");
 const searchInput = document.getElementById("searchInput");
+const sortSelect = document.getElementById("sortSelect");
 const categoryButtons = document.querySelectorAll("#categoryFilters .filter-btn");
 const statusButtons = document.querySelectorAll("#statusFilters .filter-btn");
 
 let currentCategory = "all";
 let currentStatus = "all";
 let currentSearch = "";
+let currentSort = "default";
 
 function formatStatus(status) {
   switch (status) {
@@ -26,8 +30,64 @@ function formatCategory(category) {
   return category.charAt(0).toUpperCase() + category.slice(1);
 }
 
+function formatPrice(price) {
+  if (price === null) return "Not for sale";
+  return `$${price.toLocaleString()}`;
+}
+
+function getCardHTML(item) {
+  return `
+    <a class="card-link" href="item.html?id=${item.id}">
+      <article class="card">
+        <div class="card-image-wrap">
+          <img class="card-image" src="${item.images[0]}" alt="${item.name}">
+          <span class="badge ${item.status}">${formatStatus(item.status)}</span>
+          ${item.featured ? `<span class="featured-badge">Featured</span>` : ""}
+          ${item.status === "sold" ? `<div class="sold-overlay">SOLD</div>` : ""}
+        </div>
+
+        <div class="card-content">
+          <p class="card-category">${formatCategory(item.category)}</p>
+          <h4 class="card-title">${item.name}</h4>
+          <p class="card-meta"><strong>Brand:</strong> ${item.brand}</p>
+          <p class="card-meta"><strong>Size:</strong> ${item.size}</p>
+          <p class="card-meta"><strong>Condition:</strong> ${item.condition}</p>
+          <p class="card-meta"><strong>Photos:</strong> ${item.images.length}</p>
+          <p class="card-price">${formatPrice(item.price)}</p>
+        </div>
+      </article>
+    </a>
+  `;
+}
+
+function sortItems(list) {
+  const sorted = [...list];
+
+  switch (currentSort) {
+    case "price-low":
+      sorted.sort((a, b) => (a.price ?? Infinity) - (b.price ?? Infinity));
+      break;
+    case "price-high":
+      sorted.sort((a, b) => (b.price ?? -1) - (a.price ?? -1));
+      break;
+    case "name-az":
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+    case "name-za":
+      sorted.sort((a, b) => b.name.localeCompare(a.name));
+      break;
+  }
+
+  return sorted;
+}
+
+function renderFeaturedItems() {
+  const featuredItems = items.filter(item => item.featured);
+  featuredGrid.innerHTML = featuredItems.map(getCardHTML).join("");
+}
+
 function renderItems() {
-  const filteredItems = items.filter((item) => {
+  let filteredItems = items.filter((item) => {
     const matchesCategory =
       currentCategory === "all" || item.category === currentCategory;
 
@@ -40,7 +100,6 @@ function renderItems() {
       ${item.category}
       ${item.size}
       ${item.condition}
-      ${item.price}
       ${item.status}
     `.toLowerCase();
 
@@ -49,34 +108,25 @@ function renderItems() {
     return matchesCategory && matchesStatus && matchesSearch;
   });
 
+  filteredItems = sortItems(filteredItems);
+
+  inventoryCount.textContent = `${filteredItems.length} item${filteredItems.length !== 1 ? "s" : ""}`;
+
   if (filteredItems.length === 0) {
     itemsGrid.innerHTML = `<p class="empty-state">No items found.</p>`;
     return;
   }
 
-  itemsGrid.innerHTML = filteredItems.map((item) => `
-    <a class="card-link" href="item.html?id=${item.id}">
-      <article class="card">
-        <div class="card-image-wrap">
-          <img class="card-image" src="${item.images}" alt="${item.name}">
-          <span class="badge ${item.status}">${formatStatus(item.status)}</span>
-        </div>
-
-        <div class="card-content">
-          <p class="card-category">${formatCategory(item.category)}</p>
-          <h4 class="card-title">${item.name}</h4>
-          <p class="card-meta"><strong>Brand:</strong> ${item.brand}</p>
-          <p class="card-meta"><strong>Size:</strong> ${item.size}</p>
-          <p class="card-meta"><strong>Condition:</strong> ${item.condition}</p>
-          <p class="card-price">${item.price}</p>
-        </div>
-      </article>
-    </a>
-  `).join("");
+  itemsGrid.innerHTML = filteredItems.map(getCardHTML).join("");
 }
 
 searchInput.addEventListener("input", (e) => {
   currentSearch = e.target.value;
+  renderItems();
+});
+
+sortSelect.addEventListener("change", (e) => {
+  currentSort = e.target.value;
   renderItems();
 });
 
@@ -98,4 +148,5 @@ statusButtons.forEach((button) => {
   });
 });
 
+renderFeaturedItems();
 renderItems();
