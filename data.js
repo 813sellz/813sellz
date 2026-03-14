@@ -99,5 +99,21 @@ const items = [
             "images/YSL-sunset-4.PNG"
         ],
         description: "Authentic Saint Laurent YSL Sunset chain shoulder bag crafted in smooth black leather with silver-tone YSL monogram hardware and chain strap. Features a structured flap design with magnetic closure and Saint Laurent Paris logo inside. Elegant and timeless bag perfect for everyday use or evening wear. Bag was stored and shows only light dust from storage. No dust bag or box included."
+    },
+    {
+        id: 7,
+        name: "See By Chloé Joan Small Crossbody Leather Bag",
+        brand: "See By Chloé",
+        category: "bags",
+        size: "Small",
+        condition: "9.5/10. New/ with tags. Bag appears new with original See By Chloé tag attached. Leather, corners, and strap are very clean with minimal signs of handling. Light dust from storage but no visible scratches or wear.",
+        price: "380",
+        status: "available",
+        featured: false,
+        images: [
+            "images/chloe-2.PNG",
+            "images/chloe-1.PNG"
+        ],
+        description: "Authentic See By Chloé Joan small crossbody bag crafted in smooth beige leather with the signature braided ring hardware and key charm detail on the front flap. Features a structured silhouette, gold-tone hardware, and adjustable crossbody strap. Elegant everyday bag that can be worn casually or dressed up. Bag includes original See By Chloé tag and was stored carefully with only light dust from storage."
     }
   ];
