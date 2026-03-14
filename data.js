@@ -8,7 +8,7 @@ const items = [
       condition: "8.5/10",
       price: "$400",
       status: "available",
-      image: "airmax-offwhite-menta-1.png",
+      image: "images/airmax-offwhite-menta-1.png",
       description: "Clean pair in very good condition with strong shape and minimal wear. No Box."
     },
     {
@@ -20,7 +20,7 @@ const items = [
       condition: "9/10",
       price: "$1095",
       status: "Available",
-      image: "LV-damier-ebene-1.png",
+      image: "images/LV-damier-ebene-1.png",
       description: "Premium designer bag with clean exterior and solid overall condition. From 2012 collection. Doesn't include box or dustbag"
     },
     {
