@@ -131,5 +131,21 @@ const items = [
             "images/hermes-perfume-1.PNG"
         ],
         description: "Authentic Hermès Eau De Citron Noir Eau De Cologne (100ml). A fresh citrus-woody fragrance created by Hermès perfumer Christine Nagel featuring notes of black lemon, black tea, and guaiac wood. Unisex scent suitable for both men and women. Brand new sealed in original packaging."
+    },
+    {
+        id: 9,
+        name: "Nike Air Force 1 Low Custom Blue Paisley Swoosh",
+        brand: "Nike",
+        category: "shoes",
+        size: "6.5 W",
+        condition: "10/10. Brand new with original box. Clean white leather uppers with custom blue paisley swoosh detailing. No signs of wear.",
+        price: "90",
+        status: "available",
+        featured: true,
+        images: [
+            "images/airforce-1.PNG",
+            "images/airforce-2.PNG"
+        ],
+        description: "Authentic Nike Air Force 1 Low featuring a custom blue paisley swoosh design on premium white leather. Classic AF1 silhouette with durable rubber outsole and cushioned Air midsole for everyday comfort. Brand new with original box and never worn. Unique custom pair perfect for casual wear or sneaker collectors."
     }
   ];
