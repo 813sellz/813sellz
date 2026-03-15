@@ -16,7 +16,18 @@ function formatStatus(status) {
       return status;
   }
 }
-
+function formatAudience(audience) {
+    switch (audience) {
+      case "men":
+        return "Men";
+      case "women":
+        return "Women";
+      case "unisex":
+        return "Unisex";
+      default:
+        return audience;
+    }
+  }
 function formatCategory(category) {
   return category.charAt(0).toUpperCase() + category.slice(1);
 }
@@ -47,7 +58,7 @@ if (!item) {
 
       <div class="item-info-box">
         <span class="badge ${item.status} static-badge">${formatStatus(item.status)}</span>
-        <p class="card-category">${formatCategory(item.category)}</p>
+        <p class="card-category">${formatCategory(item.category)} • ${formatAudience(item.audience)}</p>
         <h1 class="item-title">${item.name}</h1>
         <p class="item-brand"><strong>Brand:</strong> ${item.brand}</p>
         <p class="item-brand"><strong>Size:</strong> ${item.size}</p>
