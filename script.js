@@ -3,13 +3,18 @@ const featuredGrid = document.getElementById("featuredGrid");
 const inventoryCount = document.getElementById("inventoryCount");
 const searchInput = document.getElementById("searchInput");
 const sortSelect = document.getElementById("sortSelect");
+
 const categoryButtons = document.querySelectorAll("#categoryFilters .filter-btn");
 const audienceButtons = document.querySelectorAll("#audienceFilters .filter-btn");
 const statusButtons = document.querySelectorAll("#statusFilters .filter-btn");
 
+const sizeFilters = document.getElementById("sizeFilters");
+const sizeFilterGroup = document.getElementById("sizeFilterGroup");
+
 let currentCategory = "all";
 let currentAudience = "all";
 let currentStatus = "all";
+let currentSize = "all";
 let currentSearch = "";
 let currentSort = "default";
 
@@ -41,13 +46,84 @@ function formatAudience(audience) {
     case "unisex":
       return "Unisex";
     default:
-      return audience;
+      return audience || "Unisex";
   }
 }
 
 function formatPrice(price) {
   if (price === null) return "Not for sale";
   return `$${price.toLocaleString()}`;
+}
+
+function shouldShowSizeFilter() {
+  return currentCategory === "shoes" || currentCategory === "apparel";
+}
+
+function getRelevantSizes() {
+  let relevantItems = items.filter((item) => {
+    const matchesCategory =
+      currentCategory === "all" || item.category === currentCategory;
+
+    const matchesAudience =
+      currentAudience === "all" || (item.audience || "unisex") === currentAudience;
+
+    const matchesStatus =
+      currentStatus === "all" || item.status === currentStatus;
+
+    return matchesCategory && matchesAudience && matchesStatus;
+  });
+
+  const sizes = [...new Set(relevantItems.map(item => item.size).filter(Boolean))];
+
+  const apparelOrder = ["XS", "S", "M", "L", "XL", "XXL", "XXXL"];
+
+  if (currentCategory === "apparel") {
+    return sizes.sort((a, b) => apparelOrder.indexOf(a) - apparelOrder.indexOf(b));
+  }
+
+  return sizes.sort((a, b) =>
+    a.localeCompare(b, undefined, { numeric: true, sensitivity: "base" })
+  );
+}
+
+function renderSizeFilters() {
+  if (!shouldShowSizeFilter()) {
+    sizeFilterGroup.style.display = "none";
+    currentSize = "all";
+    sizeFilters.innerHTML = "";
+    return;
+  }
+
+  sizeFilterGroup.style.display = "block";
+
+  const sizes = getRelevantSizes();
+
+  let buttonsHTML = `
+    <button class="filter-btn ${currentSize === "all" ? "active" : ""}" data-size="all">
+      All
+    </button>
+  `;
+
+  sizes.forEach(size => {
+    buttonsHTML += `
+      <button class="filter-btn ${currentSize === size ? "active" : ""}" data-size="${size}">
+        ${size}
+      </button>
+    `;
+  });
+
+  sizeFilters.innerHTML = buttonsHTML;
+
+  const sizeButtons = document.querySelectorAll("#sizeFilters .filter-btn");
+
+  sizeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      sizeButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      currentSize = button.dataset.size;
+      renderItems();
+    });
+  });
 }
 
 function getCardHTML(item) {
@@ -65,7 +141,7 @@ function getCardHTML(item) {
           <p class="card-category">${formatCategory(item.category)} • ${formatAudience(item.audience)}</p>
           <h4 class="card-title">${item.name}</h4>
           <p class="card-meta"><strong>Brand:</strong> ${item.brand}</p>
-          <p class="card-meta"><strong>Size:</strong> ${item.size}</p>
+          <p class="card-meta"><strong>Size:</strong> ${item.size || "N/A"}</p>
           <p class="card-meta"><strong>Condition:</strong> ${item.condition}</p>
           <p class="card-meta"><strong>Photos:</strong> ${item.images.length}</p>
           <p class="card-price">${formatPrice(item.price)}</p>
@@ -107,10 +183,13 @@ function renderItems() {
       currentCategory === "all" || item.category === currentCategory;
 
     const matchesAudience =
-      currentAudience === "all" || item.audience === currentAudience;
+      currentAudience === "all" || (item.audience || "unisex") === currentAudience;
 
     const matchesStatus =
       currentStatus === "all" || item.status === currentStatus;
+
+    const matchesSize =
+      currentSize === "all" || item.size === currentSize;
 
     const searchText = `
       ${item.name}
@@ -124,7 +203,7 @@ function renderItems() {
 
     const matchesSearch = searchText.includes(currentSearch.toLowerCase());
 
-    return matchesCategory && matchesAudience && matchesStatus && matchesSearch;
+    return matchesCategory && matchesAudience && matchesStatus && matchesSize && matchesSearch;
   });
 
   filteredItems = sortItems(filteredItems);
@@ -154,6 +233,8 @@ categoryButtons.forEach((button) => {
     categoryButtons.forEach((btn) => btn.classList.remove("active"));
     button.classList.add("active");
     currentCategory = button.dataset.category;
+    currentSize = "all";
+    renderSizeFilters();
     renderItems();
   });
 });
@@ -163,6 +244,8 @@ audienceButtons.forEach((button) => {
     audienceButtons.forEach((btn) => btn.classList.remove("active"));
     button.classList.add("active");
     currentAudience = button.dataset.audience;
+    currentSize = "all";
+    renderSizeFilters();
     renderItems();
   });
 });
@@ -172,9 +255,12 @@ statusButtons.forEach((button) => {
     statusButtons.forEach((btn) => btn.classList.remove("active"));
     button.classList.add("active");
     currentStatus = button.dataset.status;
+    currentSize = "all";
+    renderSizeFilters();
     renderItems();
   });
 });
 
 renderFeaturedItems();
+renderSizeFilters();
 renderItems();
