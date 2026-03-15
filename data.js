@@ -27,7 +27,7 @@ const items = [
         audience: "women",
         size: "MM",
         condition: "8/10. Clean preowned Damier Ebene Canvas Tote with minimal sign of use. Hardware shows light surface wear from normal use. Interior is clean and no major stains or tears.",
-        price: "875",
+        price: 875,
         status: "available",
         featured: true,
         images: [
@@ -92,7 +92,7 @@ const items = [
         category: "bags",
         size: "Medium",
         condition: "9.5/10. Like New condition. Bag appears unused with very minimal handling wear. Light dust from storage but leather, corners, and hardware remain clean with no visible scratches or damage. Interior is clean. No original dust bag or box included.",
-        price: "1900",
+        price: 1900,
         status: "available",
         featured: true,
         images: [
@@ -111,7 +111,7 @@ const items = [
         audience: "women",
         size: "Small",
         condition: "9.5/10. New/ with tags. Bag appears new with original See By Chloé tag attached. Leather, corners, and strap are very clean with minimal signs of handling. Light dust from storage but no visible scratches or wear.",
-        price: "380",
+        price: 380,
         status: "available",
         featured: false,
         images: [
@@ -127,7 +127,7 @@ const items = [
         category: "accessories",
         size: "100ml",
         condition: "10/10. Brand new sealed in original plastic packaging. Box and product are clean with no signs of use.",
-        price: "105",
+        price: 105,
         status: "available",
         featured: false,
         images: [
@@ -144,7 +144,7 @@ const items = [
         audience: "women",
         size: "6.5 W",
         condition: "10/10. Brand new with original box. Clean white leather uppers with custom blue paisley swoosh detailing. No signs of wear.",
-        price: "90",
+        price: 90,
         status: "available",
         featured: true,
         images: [
