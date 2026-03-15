@@ -544,4 +544,18 @@
     .hero h2 {
       font-size: 2rem;
     }
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .filter-group-label {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: #b6bfcc;
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
   }
