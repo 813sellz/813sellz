@@ -9,7 +9,7 @@ const items = [
       condition: "8/10. Good used condition with normal wear from use. Light outsole wear and minor creasing. No box or extra laces.",
       price: 350,
       status: "available",
-      featured: true,
+      featured: false,
       images: [
       "images/airmax-offwhite-menta-1.PNG",
       "images/airmax-offwhite-menta-4.PNG",
@@ -29,7 +29,7 @@ const items = [
         condition: "8/10. Clean preowned Damier Ebene Canvas Tote with minimal sign of use. Hardware shows light surface wear from normal use. Interior is clean and no major stains or tears.",
         price: 875,
         status: "available",
-        featured: true,
+        featured: false,
         images: [
             "images/LV-damier-ebene-1.PNG",
             "images/LV-damier-ebene-2.PNG"
@@ -146,11 +146,68 @@ const items = [
         condition: "10/10. Brand new with original box. Clean white leather uppers with custom blue paisley swoosh detailing. No signs of wear.",
         price: 90,
         status: "available",
-        featured: true,
+        featured: false,
         images: [
             "images/airforce-1.PNG",
             "images/airforce-2.PNG"
         ],
         description: "Authentic Nike Air Force 1 Low featuring a custom blue paisley swoosh design on premium white leather. Classic AF1 silhouette with durable rubber outsole and cushioned Air midsole for everyday comfort. Brand new with original box and never worn. Unique custom pair perfect for casual wear or sneaker collectors."
-    }
+    },
+    
+      
+    {
+        id:10,
+        name: "Air Jordan 4 Retro Frozen Moments",
+        brand: "Jordan",
+        category: "shoes",
+        audience: "women",
+        size: "8",
+        condition: "10/10. Brand new with original box. Never worn. Clean suede and leather uppers with chrome hardware. No flaws or signs of use.",
+        price: "400",
+        status: "available",
+        featured: true,
+        images: [
+            "images/jordan4-forzen-2.PNG",
+            "images/jordan4-forzen-1.PNG"
+        ],
+        description: "Authentic Air Jordan 4 Retro Frozen Moments featuring premium light grey suede and leather uppers with chrome wing hardware. Classic AJ4 design with visible Air cushioning and durable rubber outsole. Brand new with original box and never worn."
+    },
+
+    {
+      id:11,
+      name: "Nike Kobe 4 Protro Mambacita Gigi",
+      brand: "Nike",
+      category: "shoes",
+      audience: "men",
+      size: "9.5",
+      condition: "10/10. Brand new with original box. Never worn. Clean uppers with spare laces included.",
+      price: "490",
+      status: "available",
+      featured: true,
+      images: [
+          "images/Kobe4-protro-mamba-1.PNG",
+          "images/Kobe4-protro-mamba-2.PNG",
+          "images/Kobe4-protro-mamba-3.PNG"
+      ],
+      description: "Authentic Nike Kobe 4 Protro featuring a low-top performance design with responsive Zoom Air cushioning. Lightweight synthetic upper with classic black swoosh and durable traction outsole. Brand new with original box and never worn."
+  },
+
+  {
+    id:12,
+    name: "Nike Air Max 1 Patta Noise Aqua",
+    brand: "Nike",
+    category: "shoes",
+    audience: "men",
+    size: "8",
+    condition: "10/10. Brand new with original box and accessories. Includes Patta bracelet pouch and extra laces. Never worn.",
+    price: "240",
+    status: "available",
+    featured: false,
+    images: [
+        "images/patta-airmax-aqua-2.PNG",
+        "images/patta-airmax-aqua-3.PNG",
+        "images/patta-airmax-aqua-1.PNG"
+    ],
+    description: "Authentic Nike Air Max 1 Patta Noise Aqua collaboration featuring the signature wavy mudguard design and premium mesh and leather construction. Includes special Patta bracelet pouch accessory. Brand new with original box and never worn."
+}
   ];
