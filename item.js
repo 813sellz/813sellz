@@ -16,24 +16,26 @@ function formatStatus(status) {
       return status;
   }
 }
-function formatAudience(audience) {
-    switch (audience) {
-      case "men":
-        return "Men";
-      case "women":
-        return "Women";
-      case "unisex":
-        return "Unisex";
-      default:
-        return audience;
-    }
-  }
+
 function formatCategory(category) {
-  return category.charAt(0).toUpperCase() + category.slice(1);
+  return category ? category.charAt(0).toUpperCase() + category.slice(1) : "Other";
+}
+
+function formatAudience(audience) {
+  switch (audience) {
+    case "men":
+      return "Men";
+    case "women":
+      return "Women";
+    case "unisex":
+      return "Unisex";
+    default:
+      return "Unisex";
+  }
 }
 
 function formatPrice(price) {
-  if (price === null) return "Not for sale";
+  if (price === null || price === undefined) return "Not for sale";
   return `$${price.toLocaleString()}`;
 }
 
@@ -45,12 +47,25 @@ if (!item) {
   itemDetail.innerHTML = `
     <div class="item-layout">
       <div class="item-image-box">
-        <img src="${item.images[0]}" alt="${item.name}" class="item-main-image" id="mainItemImage">
+        <img
+          src="${item.images[0]}"
+          alt="${item.name}"
+          class="item-main-image"
+          id="mainItemImage"
+        >
 
         <div class="thumbnail-row">
           ${item.images.map((image, index) => `
-            <button class="thumb-btn ${index === 0 ? "active-thumb" : ""}" data-image="${image}">
-              <img src="${image}" alt="${item.name} thumbnail ${index + 1}" class="thumb-image">
+            <button
+              class="thumb-btn ${index === 0 ? "active-thumb" : ""}"
+              data-image="${image}"
+              type="button"
+            >
+              <img
+                src="${image}"
+                alt="${item.name} thumbnail ${index + 1}"
+                class="thumb-image"
+              >
             </button>
           `).join("")}
         </div>
@@ -61,7 +76,7 @@ if (!item) {
         <p class="card-category">${formatCategory(item.category)} • ${formatAudience(item.audience)}</p>
         <h1 class="item-title">${item.name}</h1>
         <p class="item-brand"><strong>Brand:</strong> ${item.brand}</p>
-        <p class="item-brand"><strong>Size:</strong> ${item.size}</p>
+        <p class="item-brand"><strong>Size:</strong> ${item.size || "N/A"}</p>
         <p class="item-brand"><strong>Condition:</strong> ${item.condition}</p>
         <p class="item-brand"><strong>Photos:</strong> ${item.images.length}</p>
         <p class="item-price">${formatPrice(item.price)}</p>
