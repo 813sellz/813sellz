@@ -4,9 +4,11 @@ const inventoryCount = document.getElementById("inventoryCount");
 const searchInput = document.getElementById("searchInput");
 const sortSelect = document.getElementById("sortSelect");
 const categoryButtons = document.querySelectorAll("#categoryFilters .filter-btn");
+const audienceButtons = document.querySelectorAll("#audienceFilters .filter-btn");
 const statusButtons = document.querySelectorAll("#statusFilters .filter-btn");
 
 let currentCategory = "all";
+let currentAudience = "all";
 let currentStatus = "all";
 let currentSearch = "";
 let currentSort = "default";
@@ -30,6 +32,19 @@ function formatCategory(category) {
   return category.charAt(0).toUpperCase() + category.slice(1);
 }
 
+function formatAudience(audience) {
+  switch (audience) {
+    case "men":
+      return "Men";
+    case "women":
+      return "Women";
+    case "unisex":
+      return "Unisex";
+    default:
+      return audience;
+  }
+}
+
 function formatPrice(price) {
   if (price === null) return "Not for sale";
   return `$${price.toLocaleString()}`;
@@ -47,7 +62,7 @@ function getCardHTML(item) {
         </div>
 
         <div class="card-content">
-          <p class="card-category">${formatCategory(item.category)}</p>
+          <p class="card-category">${formatCategory(item.category)} • ${formatAudience(item.audience)}</p>
           <h4 class="card-title">${item.name}</h4>
           <p class="card-meta"><strong>Brand:</strong> ${item.brand}</p>
           <p class="card-meta"><strong>Size:</strong> ${item.size}</p>
@@ -91,6 +106,9 @@ function renderItems() {
     const matchesCategory =
       currentCategory === "all" || item.category === currentCategory;
 
+    const matchesAudience =
+      currentAudience === "all" || item.audience === currentAudience;
+
     const matchesStatus =
       currentStatus === "all" || item.status === currentStatus;
 
@@ -98,6 +116,7 @@ function renderItems() {
       ${item.name}
       ${item.brand}
       ${item.category}
+      ${item.audience}
       ${item.size}
       ${item.condition}
       ${item.status}
@@ -105,7 +124,7 @@ function renderItems() {
 
     const matchesSearch = searchText.includes(currentSearch.toLowerCase());
 
-    return matchesCategory && matchesStatus && matchesSearch;
+    return matchesCategory && matchesAudience && matchesStatus && matchesSearch;
   });
 
   filteredItems = sortItems(filteredItems);
@@ -135,6 +154,15 @@ categoryButtons.forEach((button) => {
     categoryButtons.forEach((btn) => btn.classList.remove("active"));
     button.classList.add("active");
     currentCategory = button.dataset.category;
+    renderItems();
+  });
+});
+
+audienceButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    audienceButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+    currentAudience = button.dataset.audience;
     renderItems();
   });
 });
