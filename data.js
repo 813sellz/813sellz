@@ -115,5 +115,21 @@ const items = [
             "images/chloe-1.PNG"
         ],
         description: "Authentic See By Chloé Joan small crossbody bag crafted in smooth beige leather with the signature braided ring hardware and key charm detail on the front flap. Features a structured silhouette, gold-tone hardware, and adjustable crossbody strap. Elegant everyday bag that can be worn casually or dressed up. Bag includes original See By Chloé tag and was stored carefully with only light dust from storage."
+    },
+    {
+        id: 8,
+        name: "Hermès Eau De Citron Noir Eau De Cologne 100ml",
+        brand: "Hermès",
+        category: "accessories",
+        size: "100ml",
+        condition: "10/10. Brand new sealed in original plastic packaging. Box and product are clean with no signs of use.",
+        price: "105",
+        status: "available",
+        featured: false,
+        images: [
+            "images/hermes-perfume-2.PNG",
+            "images/hermes-perfume-1.PNG"
+        ],
+        description: "Authentic Hermès Eau De Citron Noir Eau De Cologne (100ml). A fresh citrus-woody fragrance created by Hermès perfumer Christine Nagel featuring notes of black lemon, black tea, and guaiac wood. Unisex scent suitable for both men and women. Brand new sealed in original packaging."
     }
   ];
