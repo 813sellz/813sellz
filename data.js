@@ -209,5 +209,60 @@ const items = [
         "images/patta-airmax-aqua-1.PNG"
     ],
     description: "Authentic Nike Air Max 1 Patta Noise Aqua collaboration featuring the signature wavy mudguard design and premium mesh and leather construction. Includes special Patta bracelet pouch accessory. Brand new with original box and never worn."
+,
+
+},
+{
+  id: 15,
+  name: "Nike SB Dunk Low Yuto Horigome",
+  brand: "Nike",
+  category: "shoes",
+  audience: "men",
+  size: "11",
+  condition: "10/10. Brand new with original box. Never worn. Clean suede and leather uppers with no signs of wear.",
+  price: "340",
+  status: "available",
+  featured: false,
+  images: [
+      "images/sbdunk-yuto-1.PNG",
+      "images/sbdunk-yuto-2.PNG"
+  ],
+  description: "Authentic Nike SB Dunk Low Yuto Horigome collaboration featuring premium grey suede overlays, white leather base, and brown accents. Designed in collaboration with Olympic skateboarder Yuto Horigome and finished with his signature feather logo on the heel. Brand new with original box and never worn."
+},
+{
+  id: 13,
+  name: "Air Jordan 1 Retro High OG Lost & Found Chicago",
+  brand: "Jordan",
+  category: "shoes",
+  audience: "men",
+  size: "8.5",
+  condition: "10/10. Brand new with original box. Never worn. Clean leather uppers with vintage-style cracked black leather collar and classic Chicago color blocking.",
+  price: "290",
+  status: "available",
+  featured: false,
+  images: [
+      "images/jordan1-lost-found-2.PNG",
+      "images/jordan1-lost-found-1.PNG"
+  ],
+  description: "Authentic Air Jordan 1 Retro High OG Lost & Found Chicago featuring the iconic Chicago colorway with vintage inspired details including cracked leather collar and aged midsole. Premium leather construction with classic Air Jordan branding. Brand new with original box and never worn."
+},
+{
+  id:14,
+  name: "Air Jordan 3 Retro Powder Blue",
+  brand: "Jordan",
+  category: "shoes",
+  audience: "men",
+  size: "10",
+  condition: "10/10. Brand new with original box and hang tag. Never worn. Clean leather uppers with classic elephant print overlays and no signs of wear.",
+  price: "370",
+  status: "available",
+  featured: false,
+  images: [
+      "images/jordan3-powder-blue-1.PNG",
+      "images/jordan3-powder-blue-2.PNG",
+      "images/jordan3-powder-blue-3.PNG"
+  ],
+  description: "Authentic Air Jordan 3 Retro Powder Blue featuring premium blue leather uppers with signature elephant print overlays on the toe and heel. Classic AJ3 design with visible Air cushioning and durable rubber outsole. Includes original hang tag and box. Brand new and never worn."
 }
+
   ];
