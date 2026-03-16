@@ -36,23 +36,23 @@ const items = [
             ],
         description: "  Authentic Louis Vuitton Damier Ebene tote bag featuring the iconic brown checkerboard coated canvas with dark brown leather trim and gold-tone hardware. Classic structured tote design with comfortable shoulder straps and front Louis Vuitton engraved plaque. Spacious interior perfect for everyday use. No box or dust bag for this bag. "
     },
-    {
+     {
       id: 3,
-      name: "Essentials Hoodie",
+      name: "Fear of God Essentials Hoodie Light Oatmeal",
       brand: "Fear of God Essentials",
       category: "apparel",
       audience: "unisex",
       size: "M",
-      condition: "9/10",
-      price: 120,
+      condition: "9.8/10. Brand new with original packaging and tags. Never worn. Clean fabric with no signs of wear. Zip Top Bag little creased.",
+      price: "115",
       status: "available",
       featured: false,
       images: [
-        "images/hoodie-1.jpg",
-        "images/hoodie-2.jpg"
+          "images/FOG-light-oatmilk-1.PNG",
+          "images/FOG-light-oatmilk-2.PNG"
       ],
-      description: "Minimal streetwear staple with soft fabric and excellent condition."
-    },
+      description: "Authentic Fear of God Essentials hoodie featuring the signature ESSENTIALS Fear of God logo print on the chest and back. Premium heavyweight cotton blend with relaxed oversized fit and kangaroo pocket. Brand new with original packaging and tags."
+  },
     {
       id: 4,
       name: "Tissot Watch",
