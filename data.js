@@ -336,5 +336,22 @@ const items = [
       "images/sbdunk-supreme-rammellzee-3.PNG"
   ],
   description: "Authentic Nike SB Dunk Low Supreme Rammellzee collaboration featuring printed canvas panels with Rammellzee artwork and black suede overlays. Gum outsole with classic SB Dunk cushioning and Supreme branding. Brand new and never worn with original box (box has minor wear)."
+},
+    {
+  id: 19,
+  name: "Supreme Fox Racing Sweater Black",
+  brand: "Supreme",
+  category: "apparel",
+  audience: "men",
+  size: "M",
+  condition: "10/10. Brand new with tags. Never worn. Knit sweater featuring Fox Racing graphics on chest, sleeves, and back with Supreme branding.",
+  price: "260",
+  status: "available",
+  featured: false,
+  images: [
+      "images/supreme-sweater-foxracing-1.PNG",
+      "images/supreme-sweater-foxracing-2.PNG"
+  ],
+  description: "Authentic Supreme x Fox Racing collaboration knit sweater in black featuring large Fox head graphic on the chest and SUPREME branding across the back. Premium knit construction with ribbed collar, cuffs, and hem. Brand new and never worn."
 }
   ];
