@@ -36,7 +36,7 @@ const items = [
             ],
         description: "  Authentic Louis Vuitton Damier Ebene tote bag featuring the iconic brown checkerboard coated canvas with dark brown leather trim and gold-tone hardware. Classic structured tote design with comfortable shoulder straps and front Louis Vuitton engraved plaque. Spacious interior perfect for everyday use. No box or dust bag for this bag. "
     },
-     {
+    {
       id: 3,
       name: "Fear of God Essentials Hoodie Light Oatmeal",
       brand: "Fear of God Essentials",
@@ -263,6 +263,78 @@ const items = [
       "images/jordan3-powder-blue-3.PNG"
   ],
   description: "Authentic Air Jordan 3 Retro Powder Blue featuring premium blue leather uppers with signature elephant print overlays on the toe and heel. Classic AJ3 design with visible Air cushioning and durable rubber outsole. Includes original hang tag and box. Brand new and never worn."
-}
+},
 
+{
+  id:15,
+  name: "Nike Air Force 1  '07 LX 'Nail Art - Celestine Blue'",
+  brand: "Nike",
+  category: "shoes",
+  audience: "women",
+  size: "8",
+  condition: "10/10. Brand new with original box and tags. Never worn. Clean leather uppers with glossy cloud-style swoosh detail.",
+  price: "250",
+  status: "available",
+  featured: false,
+  images: [
+      "images/airforce1-LX-Nail-Art-1.PNG",
+      "images/airforce1-LX-Nail-Art-2.PNG",
+      "images/airforce1-LX-Nail-Art-3.PNG"
+  ],
+  description: "Authentic Nike Air Force 1 Low featuring a clean white and blue colorway with a glossy cloud-pattern swoosh and icy outsole. Classic Air Force 1 construction with premium leather and cushioned sole. Brand new with original box and tags."
+},
+
+{
+  id: 16,
+  name: "Nike Dunk Low Orange Paisley",
+  brand: "Nike",
+  category: "shoes",
+  audience: "women",
+  size: "8",
+  condition: "10/10. Brand new with original box. Never worn. Clean leather uppers with orange paisley swoosh detail.",
+  price: "140",
+  status: "available",
+  featured: false,
+  images: [
+      "images/dunk-paisley-orange-1.PNG",
+      "images/dunk-paisley-orange-2.PNG"
+  ],
+  description: "Authentic Nike Dunk Low featuring a white and bright orange leather upper with a paisley pattern swoosh. Classic Dunk silhouette with padded collar and durable rubber outsole. Brand new with original box and never worn."
+},
+
+{
+  id: 17,
+  name: "Nike Dunk Low Vintage Navy 2022",
+  brand: "Nike",
+  category: "shoes",
+  audience: "women",
+  size: "7.5",
+  condition: "10/10. Brand new with original box. Never worn. Clean white leather upper with midnight navy overlays and vintage-style aged midsole.",
+  price: "150",
+  status: "available",
+  featured: false,
+  images: [
+      "images/dunk-vintage-navy-1.PNG",
+      "images/dunk-vinatge-navy-2.PNG"
+  ],
+  description: "Authentic Nike Dunk Low Vintage Navy from the 2022 release. Features classic white leather base with midnight navy overlays and an aged midsole for a vintage aesthetic. Classic Dunk silhouette with padded collar and durable rubber outsole. Brand new with original box."
+},
+{
+  id: 18,
+  name: "Nike SB Dunk Low Supreme Rammellzee",
+  brand: "Nike SB",
+  category: "shoes",
+  audience: "men",
+  size: "8",
+  condition: "10/10. Brand new with original box. Never worn. Canvas upper featuring Rammellzee artwork with black suede overlays. Original box included but has minor damage.",
+  price: "400",
+  status: "available",
+  featured: true,
+  images: [
+      "images/sbdunk-supreme-rammellzee-1.PNG",
+      "images/sbdunk-supreme-rammellzee-2.PNG",
+      "images/sbdunk-supreme-rammellzee-3.PNG"
+  ],
+  description: "Authentic Nike SB Dunk Low Supreme Rammellzee collaboration featuring printed canvas panels with Rammellzee artwork and black suede overlays. Gum outsole with classic SB Dunk cushioning and Supreme branding. Brand new and never worn with original box (box has minor wear)."
+}
   ];
